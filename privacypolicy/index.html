@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Galvanic Game Studio</title>
+<meta name="description" content="Privacy Policy for Galvanic Game Studio mobile applications.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0D1117;
+    --surface:#151B2B;
+    --surface-2:#1B2338;
+    --line:#262F45;
+    --paper:#EDEFF5;
+    --muted:#8891A7;
+    --amber:#F2A93B;
+    --teal:#4FD6C0;
+    --radius:14px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+
+  body{
+    margin:0;
+    background:var(--ink);
+    color:var(--paper);
+    font-family:'Inter', system-ui, sans-serif;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation:none !important; transition:none !important;}
+  }
+
+  a{color:var(--teal);}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--teal); outline-offset:3px;}
+
+  .wrap{max-width:1180px; margin:0 auto; padding:0 24px;}
+
+  /* ---------- Header ---------- */
+  header.site{
+    border-bottom:1px solid var(--line);
+    padding:20px 0;
+    position:sticky; top:0;
+    background:rgba(13,17,23,0.92);
+    backdrop-filter:blur(8px);
+    z-index:50;
+  }
+  .brand{display:flex; align-items:center; gap:12px;}
+  .brand-mark{
+    width:34px; height:34px; border-radius:9px;
+    background:linear-gradient(135deg, var(--amber), #C97A1F);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Space Grotesk', sans-serif; font-weight:700; color:#1A1200;
+    flex-shrink:0;
+  }
+  .brand-name{font-family:'Space Grotesk', sans-serif; font-weight:600; font-size:15px; letter-spacing:0.01em;}
+  .brand-sub{color:var(--muted); font-size:12px; font-family:'IBM Plex Mono', monospace;}
+
+  /* ---------- Hero ---------- */
+  .hero{padding:64px 0 40px; border-bottom:1px solid var(--line);}
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    color:var(--amber);
+    font-size:12.5px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    margin-bottom:14px;
+  }
+  h1{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:700;
+    font-size:clamp(34px, 5.4vw, 56px);
+    line-height:1.05;
+    margin:0 0 18px;
+    letter-spacing:-0.01em;
+  }
+  .hero-lede{
+    color:var(--muted);
+    font-size:17px;
+    max-width:640px;
+    margin:0 0 26px;
+  }
+  .meta-row{display:flex; flex-wrap:wrap; gap:10px;}
+  .meta-chip{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    color:var(--paper);
+    background:var(--surface);
+    border:1px solid var(--line);
+    padding:7px 12px;
+    border-radius:100px;
+    display:flex; align-items:center; gap:7px;
+  }
+  .meta-chip .dot{width:6px; height:6px; border-radius:50%; background:var(--teal); flex-shrink:0;}
+
+  /* ---------- At-a-glance strip (signature element) ---------- */
+  .glance{padding:36px 0; border-bottom:1px solid var(--line);}
+  .glance-grid{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    overflow:hidden;
+  }
+  .glance-card{
+    background:var(--surface);
+    padding:22px 20px;
+  }
+  .glance-icon{
+    width:30px; height:30px;
+    margin-bottom:14px;
+    color:var(--amber);
+  }
+  .glance-icon svg{width:100%; height:100%;}
+  .glance-title{font-family:'Space Grotesk', sans-serif; font-weight:600; font-size:14.5px; margin-bottom:6px;}
+  .glance-desc{color:var(--muted); font-size:13px; line-height:1.5;}
+
+  @media (max-width:820px){
+    .glance-grid{grid-template-columns:repeat(2, 1fr);}
+  }
+
+  /* ---------- Body layout ---------- */
+  .body-layout{
+    display:grid;
+    grid-template-columns:220px 1fr;
+    gap:56px;
+    padding:48px 0 100px;
+    align-items:start;
+  }
+
+  nav.toc{
+    position:sticky; top:88px;
+    display:flex; flex-direction:column; gap:2px;
+    max-height:calc(100vh - 120px);
+    overflow-y:auto;
+  }
+  nav.toc a{
+    color:var(--muted);
+    text-decoration:none;
+    font-size:13px;
+    padding:9px 12px;
+    border-radius:8px;
+    display:flex; gap:10px;
+    font-family:'IBM Plex Mono', monospace;
+  }
+  nav.toc a .num{color:var(--amber); flex-shrink:0;}
+  nav.toc a:hover{background:var(--surface); color:var(--paper);}
+  nav.toc a.active{background:var(--surface-2); color:var(--paper);}
+
+  @media (max-width:900px){
+    .body-layout{grid-template-columns:1fr; gap:0; padding-top:24px;}
+    nav.toc{
+      position:sticky; top:73px;
+      flex-direction:row;
+      overflow-x:auto;
+      max-height:none;
+      background:var(--ink);
+      padding:12px 0;
+      border-bottom:1px solid var(--line);
+      margin-bottom:28px;
+      gap:8px;
+      -ms-overflow-style:none; scrollbar-width:none;
+    }
+    nav.toc::-webkit-scrollbar{display:none;}
+    nav.toc a{
+      white-space:nowrap;
+      background:var(--surface);
+      border:1px solid var(--line);
+    }
+  }
+
+  section.policy-section{
+    padding-bottom:40px;
+    margin-bottom:40px;
+    border-bottom:1px solid var(--line);
+    scroll-margin-top:90px;
+  }
+  section.policy-section:last-child{border-bottom:none; margin-bottom:0;}
+
+  .sec-head{display:flex; align-items:baseline; gap:14px; margin-bottom:16px;}
+  .sec-num{
+    font-family:'IBM Plex Mono', monospace;
+    color:var(--amber);
+    font-size:14px;
+    flex-shrink:0;
+  }
+  h2{
+    font-family:'Space Grotesk', sans-serif;
+    font-size:22px;
+    font-weight:600;
+    margin:0;
+    letter-spacing:-0.005em;
+  }
+  section.policy-section p{
+    color:#D3D8E4;
+    font-size:15.5px;
+    margin:0 0 14px;
+  }
+  section.policy-section p:last-child{margin-bottom:0;}
+  section.policy-section strong{color:var(--paper);}
+
+  ul.plain{margin:0 0 14px; padding-left:20px; color:#D3D8E4; font-size:15.5px;}
+  ul.plain li{margin-bottom:6px;}
+
+  .note{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-left:3px solid var(--teal);
+    border-radius:8px;
+    padding:14px 16px;
+    font-size:14px;
+    color:var(--muted);
+    margin-top:16px;
+  }
+  .note strong{color:var(--teal);}
+
+  .contact-card{
+    background:linear-gradient(180deg, var(--surface), var(--surface-2));
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:28px;
+    display:flex; flex-wrap:wrap; gap:24px; justify-content:space-between; align-items:center;
+  }
+  .contact-card a{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:600;
+    font-size:18px;
+    text-decoration:none;
+  }
+  .contact-card .label{color:var(--muted); font-size:12.5px; font-family:'IBM Plex Mono', monospace; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:6px;}
+
+  footer.site{
+    border-top:1px solid var(--line);
+    padding:28px 0;
+    color:var(--muted);
+    font-size:12.5px;
+    font-family:'IBM Plex Mono', monospace;
+    text-align:center;
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap brand">
+    <div class="brand-mark">G</div>
+    <div>
+      <div class="brand-name">Galvanic Game Studio</div>
+      <div class="brand-sub">Legal / Privacy</div>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Legal Document</div>
+    <h1>Privacy Policy</h1>
+    <p class="hero-lede">How Galvanic Game Studio collects, uses, and protects information across our mobile applications on Google Play and the App Store.</p>
+    <div class="meta-row">
+      <span class="meta-chip"><span class="dot"></span>Effective Date: July 19, 2026</span>
+      <span class="meta-chip"><span class="dot"></span>appixgame@gmail.com</span>
+      <span class="meta-chip"><span class="dot"></span>Applies to all Galvanic Game Studio apps</span>
+    </div>
+  </div>
+</section>
+
+<section class="glance">
+  <div class="wrap">
+    <div class="glance-grid">
+      <div class="glance-card">
+        <div class="glance-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="9" y1="18" x2="15" y2="18"/></svg></div>
+        <div class="glance-title">Device &amp; usage data</div>
+        <div class="glance-desc">Device type, OS version, crash reports, and interaction data to improve the apps.</div>
+      </div>
+      <div class="glance-card">
+        <div class="glance-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18"/></svg></div>
+        <div class="glance-title">Ads &amp; analytics</div>
+        <div class="glance-desc">AdMob, Firebase, and Google Play Services support advertising and app performance.</div>
+      </div>
+      <div class="glance-card">
+        <div class="glance-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.2"/><path d="M5 21c0-4 3-6 7-6s7 2 7 6"/></svg></div>
+        <div class="glance-title">Kids' apps collect no PII</div>
+        <div class="glance-desc">Child-directed apps do not knowingly collect personal data, per COPPA and GDPR-K.</div>
+      </div>
+      <div class="glance-card">
+        <div class="glance-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6z"/></svg></div>
+        <div class="glance-title">Your rights</div>
+        <div class="glance-desc">Access, correct, delete, or restrict your data at any time by contacting us.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap body-layout">
+  <nav class="toc" id="toc">
+    <a href="#collection"><span class="num">01</span>Information We Collect</a>
+    <a href="#third-party"><span class="num">02</span>Third-Party Services</a>
+    <a href="#legal-bases"><span class="num">03</span>Legal Bases</a>
+    <a href="#social-login"><span class="num">04</span>Social Logins</a>
+    <a href="#retention"><span class="num">05</span>Data Retention</a>
+    <a href="#security"><span class="num">06</span>Data Security</a>
+    <a href="#children"><span class="num">07</span>Children's Privacy</a>
+    <a href="#rights"><span class="num">08</span>Your Rights</a>
+    <a href="#dnt"><span class="num">09</span>Do-Not-Track</a>
+    <a href="#links"><span class="num">10</span>Third-Party Links</a>
+    <a href="#updates"><span class="num">11</span>Policy Updates</a>
+    <a href="#contact"><span class="num">12</span>Contact Us</a>
+  </nav>
+
+  <main>
+
+    <section class="policy-section" id="intro" style="scroll-margin-top:90px;">
+      <p>At Galvanic Game Studio, we are committed to protecting the privacy of our users — both adults and children. This Privacy Policy explains how we collect, use, and safeguard your information when you download and use our mobile applications available on both the Google Play Store and Apple App Store. By choosing to use our applications, you agree to the practices outlined in this policy.</p>
+    </section>
+
+    <section class="policy-section" id="collection">
+      <div class="sec-head"><span class="sec-num">01</span><h2>Information Collection and Use</h2></div>
+      <p>To provide and improve our services, we may collect certain types of information. This includes both personal information (which can identify you) and non-personal information (which cannot). For example, our apps may collect device-specific data such as device type, operating system version, crash reports, usage statistics, and interaction data to help us improve the user experience.</p>
+      <p>Some of our apps, particularly those designed for adults, may offer account login features through third-party providers such as Google or Facebook. If you choose to sign in this way, we may access basic profile information such as your name, email address, and profile picture. This information is used solely to personalize your experience within the app and is not shared with unaffiliated third parties.</p>
+      <p>Apps intended for children do not request or collect personally identifiable information. In compliance with applicable child privacy laws (such as COPPA in the US and GDPR-K in Europe), we take strict measures to avoid collecting, storing, or processing any data that can identify a child. Ads in kids' apps, if shown, are served only through child-safe, COPPA-compliant networks, and no behavioral or interest-based tracking is allowed.</p>
+      <div class="note"><strong>Note:</strong> If a specific app requests location access, that app's Google Play Data Safety section will separately disclose whether precise or approximate location is collected and why.</div>
+    </section>
+
+    <section class="policy-section" id="third-party">
+      <div class="sec-head"><span class="sec-num">02</span><h2>Third-Party Services</h2></div>
+      <p>Our applications may use third-party services that collect and process user data under their own privacy policies. These may include:</p>
+      <ul class="plain">
+        <li>Google Play Services</li>
+        <li>AdMob (for in-app advertising)</li>
+        <li>Firebase (for analytics and crash reporting)</li>
+        <li>Facebook (for login and analytics in adult apps)</li>
+        <li>Apple services (where applicable, on iOS platforms)</li>
+      </ul>
+      <p>We encourage users to review the privacy policies of these third-party providers to better understand their practices.</p>
+    </section>
+
+    <section class="policy-section" id="legal-bases">
+      <div class="sec-head"><span class="sec-num">03</span><h2>Legal Bases for Processing Your Data</h2></div>
+      <p>For users in the European Union (EU), the United Kingdom (UK), or Canada, we process personal data under the legal bases permitted by applicable data protection regulations, such as the General Data Protection Regulation (GDPR) and PIPEDA. These legal bases include user consent, performance of a contract, legal obligations, and legitimate business interests — such as preventing fraud, analyzing app performance, or improving functionality.</p>
+      <p>For child-directed apps, data is only processed when permitted under child data protection laws. For example, in cases where data collection is necessary to support internal operations of the app (like crash detection or session management), we ensure that no personally identifiable information is involved.</p>
+    </section>
+
+    <section class="policy-section" id="social-login">
+      <div class="sec-head"><span class="sec-num">04</span><h2>Social Logins (Adults Only)</h2></div>
+      <p>Where social login is offered (e.g., "Log in with Google" or "Continue with Facebook"), the information obtained is limited to what is required for app functionality. This may include your name and email address and is used solely for account identification and personalization. We do not share this data with any other parties, and access is governed by the social platform's privacy settings.</p>
+    </section>
+
+    <section class="policy-section" id="retention">
+      <div class="sec-head"><span class="sec-num">05</span><h2>Data Retention</h2></div>
+      <p>We retain user data only for as long as it is necessary for the purposes described in this policy or as required by law. When personal data is no longer needed, we securely delete or anonymize it. If data is stored in backups, it will be isolated and deleted as soon as possible.</p>
+    </section>
+
+    <section class="policy-section" id="security">
+      <div class="sec-head"><span class="sec-num">06</span><h2>Data Security</h2></div>
+      <p>We implement reasonable and appropriate technical and organizational measures to safeguard your data against unauthorized access, loss, or misuse. However, it's important to note that no internet-based service is ever completely secure, and while we do our best to protect your information, we cannot guarantee absolute security. We recommend using secure networks and up-to-date devices when accessing our apps.</p>
+    </section>
+
+    <section class="policy-section" id="children">
+      <div class="sec-head"><span class="sec-num">07</span><h2>Children's Privacy</h2></div>
+      <p>Galvanic Game Studio takes children's privacy seriously. We design our child-directed apps to comply with relevant child privacy protection laws. We do not knowingly collect personal data from children without verified parental consent. If we discover that such data has been inadvertently collected, we take steps to promptly delete it.</p>
+      <p>For apps directed at children or used by users of unknown age, we do not transmit advertising identifiers or other device identifiers that could be used for behavioral tracking. Advertising shown in these apps is limited to contextual, non-personalized placements served through child-safe networks.</p>
+      <p>Parents and guardians have the right to review and request the deletion of any data potentially collected from their child. If you believe your child has provided us with personal information without your consent, please contact us immediately at <a href="mailto:appixgame@gmail.com">appixgame@gmail.com</a>.</p>
+    </section>
+
+    <section class="policy-section" id="rights">
+      <div class="sec-head"><span class="sec-num">08</span><h2>Your Privacy Rights</h2></div>
+      <p>Depending on your location, you may have rights related to your personal information, including the right to access, correct, delete, or restrict how your data is processed. If we rely on your consent to process your information, you may also withdraw that consent at any time.</p>
+      <p>If you are a California resident, you may have additional rights under the California Consumer Privacy Act (CCPA/CPRA), including the right to know what personal information is collected and to request its deletion. We do not sell personal information.</p>
+      <p>To exercise any of these rights, please email us at <a href="mailto:appixgame@gmail.com">appixgame@gmail.com</a>. We will respond to such requests in accordance with applicable data protection laws.</p>
+    </section>
+
+    <section class="policy-section" id="dnt">
+      <div class="sec-head"><span class="sec-num">09</span><h2>Do-Not-Track Signals</h2></div>
+      <p>Our services do not currently respond to "Do Not Track" signals from browsers, as no uniform standard has been adopted. We will update this policy should such a standard be established in the future.</p>
+    </section>
+
+    <section class="policy-section" id="links">
+      <div class="sec-head"><span class="sec-num">10</span><h2>Third-Party Links</h2></div>
+      <p>Our apps may contain links to third-party websites or services. We are not responsible for the content or privacy practices of those websites. We strongly encourage you to review the privacy policies of any third-party sites you interact with.</p>
+    </section>
+
+    <section class="policy-section" id="updates">
+      <div class="sec-head"><span class="sec-num">11</span><h2>Policy Updates</h2></div>
+      <p>We may update this Privacy Policy from time to time. Any changes will be posted within the app or on our official website with an updated "Effective Date." For major changes, we may also notify you through email or app notifications where possible. We encourage you to review the Privacy Policy regularly to stay informed.</p>
+    </section>
+
+    <section class="policy-section" id="contact">
+      <div class="sec-head"><span class="sec-num">12</span><h2>Contact Us</h2></div>
+      <p>If you have any questions or concerns about this Privacy Policy or how your data is handled, feel free to reach out.</p>
+      <div class="contact-card">
+        <div>
+          <div class="label">Email</div>
+          <a href="mailto:appixgame@gmail.com">appixgame@gmail.com</a>
+        </div>
+        <div>
+          <div class="label">Developer</div>
+          <a href="#" style="color:var(--paper);">Galvanic Game Studio</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<footer class="site">
+  © 2025–2026 Galvanic Game Studio. All rights reserved.
+</footer>
+
+<script>
+  // Highlight active TOC item on scroll
+  const sections = document.querySelectorAll('.policy-section[id]');
+  const links = document.querySelectorAll('#toc a');
+  const map = {};
+  links.forEach(l => map[l.getAttribute('href').slice(1)] = l);
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const id = entry.target.getAttribute('id');
+      const link = map[id];
+      if (!link) return;
+      if (entry.isIntersecting){
+        links.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+
+  sections.forEach(s => observer.observe(s));
+</script>
+
+</body>
+</html>
